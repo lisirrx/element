@@ -274,7 +274,10 @@
         this.setCurrentValue(value);
       },
       handleChange(event) {
-        this.$emit('change', event.target.value);
+        const value = event.target.value;
+        this.$emit('change', value);
+        this.setCurrentValue(value);
+
       },
       setCurrentValue(value) {
         if (value === this.currentValue) return;
